@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "apis/*": ["src/apis/*"],
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/components/*"],
+      "config/*": ["src/config/*"],
+      "constants/*": ["src/constants/*"],
+      "containers/*": ["src/containers/*"],
+      "stores/*": ["src/stores/*"],
+      "stylesheets/*": ["src/stylesheets/*"],
+      "utils/*": ["src/utils/*"]
+    }
+  },
+  "include": ["src"]
+}
