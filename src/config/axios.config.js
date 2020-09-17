@@ -88,23 +88,19 @@ axiosInstance.interceptors.response.use(
     const { url, headers } = response.config;
     resetLoading(url, headers.loadingType);
     whenError();
-    return Promise.reject(response || { data: {} });
+    return Promise.reject(error);
   }
 );
 
 const getAndDel = (url, params, method) => {
-  const { query, loadingType = 0 } = params;
+  const { query, options, loadingType = 0 } = params;
   let queryString = "";
   if (query) {
     queryString = `${url}?${Qs.stringify(query)}`;
   } else {
     queryString = url;
   }
-  return axiosInstance[method](queryString, {
-    headers: {
-      loadingType,
-    },
-  });
+  return axiosInstance[method](queryString, configHeaders(options, loadingType));
 };
 
 const putAndPost = (url, params, method) => {
