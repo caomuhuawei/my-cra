@@ -1,3 +1,10 @@
+**注意：该项目只是一个搭建范例，不包含业务逻辑， 项目运行后只能看到一个页面。**
+
+### 项目架构
+CRA+react-router+mobx5+axios+antd-mobile2+customize-cra
+
+并为项目配置eslint规则和git提交规则
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
