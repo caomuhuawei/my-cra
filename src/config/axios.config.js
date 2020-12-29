@@ -93,7 +93,7 @@ axiosInstance.interceptors.response.use(
 );
 
 const getAndDel = (url, params, method) => {
-  const { query, options, loadingType = 0 } = params;
+  const { query, options = { headers: {} }, loadingType = 0 } = params;
   let queryString = "";
   if (query) {
     queryString = `${url}?${Qs.stringify(query)}`;
@@ -110,15 +110,15 @@ const putAndPost = (url, params, method) => {
 
 export default {
   get: (url, params = {}) => {
-    getAndDel(url, params, `get`);
+    return getAndDel(url, params, `get`);
   },
   put: (url, params = {}) => {
-    putAndPost(url, params, `put`);
+    return putAndPost(url, params, `put`);
   },
   post: (url, params = {}) => {
-    putAndPost(url, params, `post`);
+    return putAndPost(url, params, `post`);
   },
   del: (url, params = {}) => {
-    getAndDel(url, params, `del`);
+    return getAndDel(url, params, `del`);
   },
 };
