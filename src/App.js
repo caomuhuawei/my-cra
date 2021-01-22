@@ -4,6 +4,8 @@ import { Provider } from "mobx-react";
 import routes from "./config/router.config";
 import Loading from "./components/loading";
 import Home from "./containers/home";
+import Login from "./containers/login";
+import List from "./containers/list";
 import { allStore } from "./stores/createStore";
 import { get } from "utils/storage";
 
@@ -12,7 +14,8 @@ export default function RouteConfig(props) {
     <Provider {...allStore}>
       <Router>
         <Switch>
-          {/* <Route exact path="/login" component={Login} /> */}
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/list" component={List} />
           <Route exact path="/" component={Home} />
           {routes.map((route, i) => (
             <Route

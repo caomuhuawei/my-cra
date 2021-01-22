@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { configure } from "mobx";
-import "./stylesheets/App.css";
-import "./stylesheets/index.css";
+import "./stylesheets/App.scss";
+import "./stylesheets/index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 require("fastclick");
