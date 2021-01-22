@@ -1,4 +1,4 @@
-**注意：该项目只是一个搭建范例，不包含业务逻辑界面， 项目运行后只能看到三个页面： 首页， 登录页， 列表页。但提供了cra项目基本的配置，包括路由，数据管理，http请求库，ui库, cra配置扩展，sw, eslint规则，git规则, loading统一管理等**
+**注意：该项目只是一个搭建范例，不包含业务逻辑界面， 项目运行后只能看到三个页面： 首页， 登录页， 列表页。但提供了cra项目基本的配置，包括路由，数据管理，http请求库，ui库, cra配置扩展，sw, eslint规则，git规则, hook, loading统一管理等**
 
 ### 项目架构
 CRA+react-router+mobx5+axios+antd-mobile2+customize-cra
